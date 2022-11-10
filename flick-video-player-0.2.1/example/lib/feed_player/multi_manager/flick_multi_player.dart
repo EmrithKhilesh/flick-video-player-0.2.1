@@ -1,4 +1,4 @@
-import 'package:example/feed_player/portrait_controls.dart';
+// import 'package:example/feed_player/portrait_controls.dart';
 
 import './flick_multi_manager.dart';
 import 'package:flick_video_player/flick_video_player.dart';
@@ -79,10 +79,7 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
               ),
             ),
             //!_________________________________________CHANGE CONTROL BELOW____________________________________________________________________________________
-            controls: FeedPlayerPortraitControls(
-              flickMultiManager: widget.flickMultiManager,
-              flickManager: flickManager,
-            ),
+            controls: Center(child: FlickPlayToggle())
             //!_____________________________________________________________________________________________________________________________
 
           ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import './multi_manager/flick_multi_manager.dart';
 import './multi_manager/flick_multi_player.dart';
-import '../utils/mock_data.dart';
 
 class FeedPlayer extends StatefulWidget {
   FeedPlayer({Key key}) : super(key: key);
@@ -12,8 +11,6 @@ class FeedPlayer extends StatefulWidget {
 }
 
 class _FeedPlayerState extends State<FeedPlayer> {
-  List items = mockData['items'];
-
   FlickMultiManager flickMultiManager;
 
   @override
@@ -36,7 +33,7 @@ class _FeedPlayerState extends State<FeedPlayer> {
           separatorBuilder: (context, int) => Container(
             height: 50,
           ),
-          itemCount: items.length,
+          itemCount: 3,
           itemBuilder: (context, index) {
             return Container(
                 height: 400,
@@ -44,9 +41,9 @@ class _FeedPlayerState extends State<FeedPlayer> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(5),
                   child: FlickMultiPlayer(
-                    url: items[index]['trailer_url'],
+                    url: "https://github.com/GeekyAnts/flick-video-player-demo-videos/blob/master/example/the_valley_compressed.mp4?raw=true",
                     flickMultiManager: flickMultiManager,
-                    image: items[index]['image'],
+                    image: "",
                   ),
                 ));
           },

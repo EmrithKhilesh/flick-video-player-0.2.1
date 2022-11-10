@@ -14,14 +14,14 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   visibility_detector: ^0.1.5
   flick_video_player:
-    path: '../'
+  # path: '../'
   video_player: ^2.0.2
   provider: ^5.0.0
 
